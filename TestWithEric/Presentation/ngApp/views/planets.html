@@ -1,0 +1,14 @@
+﻿<div class="row">
+    <form name="planet" class="form-horizontal" ng-submit="controller.addPlanet(planet)">
+        <input class="form-control" ng-model="planet.name" placeholder="Enter planet name" />
+        <input class="form-control" ng-model="planet.distance" placeholder="Enter the distance from the Sun (million miles)" />
+        <input type="submit" class="form-control btn btn-success" value="Submit" />
+    </form>
+</div>
+
+<div class="row">
+    <div ng-repeat="planet in controller.planets">
+        <p><b>{{planet.name}} </b></p>
+        <p>Distance from the Sun: {{planet.distance}}  million miles</p>
+    </div>
+</div>
